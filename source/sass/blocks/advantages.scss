@@ -1,0 +1,126 @@
+.advantages {
+  background-color: #F8F9FC;
+}
+
+.advantages__title {
+  @include title;
+
+  margin: 0;
+  padding: 0;
+
+  text-align: center;
+
+  padding-top: 120px;
+}
+
+.advantages__wrapper {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  color: $dark-blue;
+
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.advantages__table:nth-child(2) {
+  padding-left: 40px;
+}
+
+.advantages__middle-desc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-family: $font-secondary;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.advantages__middle-count {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 74px;
+  line-height: 111px;
+}
+
+.advantages__middle-subtitle {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 39px;
+}
+
+.advantages__count {
+  font-family: $font-secondary;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 71px;
+  // line-height: 106px;
+
+  margin-right: 25px;
+
+  background: linear-gradient(145.72deg, #ED0233 25.6%, #003EB7 56.31%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.advantages__count span {
+  display: block;
+  margin-top: -10px;
+  margin-left: -2px;
+
+  font-family: $font-secondary;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+
+  color: #2E35AC;
+}
+
+.advantages__item {
+  display: flex;
+
+  &--center {
+    background-color: $middle-blue;
+    color: $white;
+
+    align-items: center;
+    max-width: 240px;
+    text-align: center;
+
+    // margin-right: 40px;
+  }
+}
+
+.advantages__cell {
+  display: flex;
+  justify-content: space-between;
+  font-family: $font-secondary;
+}
+
+.advantages__desc {
+  display: flex;
+  flex-direction: column;
+
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+
+  :not(b) {
+    max-width: 74%;
+  }
+}
+
+.advantages__desc b {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 33px;
+}

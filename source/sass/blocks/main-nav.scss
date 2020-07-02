@@ -1,0 +1,59 @@
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+
+  margin: 0 auto;
+  padding-top: 31px;
+}
+
+.main-nav__tel {
+  @include animation;
+
+font-family: $font-primary;
+font-size: 26px;
+line-height: 26px;
+letter-spacing: 0.03em;
+
+color: $white;
+
+&:hover {
+  color: $black;
+  }
+}
+
+@media (max-width: $desktop) {
+  .main-nav {
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-top: 40px;
+  }
+
+  .main-nav__logo-img {
+    width: 82px;
+    height: 17px;
+  }
+
+  .main-nav__tel {
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+  }
+}
+
+@media (max-width: $tablet) {
+  .main-nav {
+    padding-left: 14px;
+    padding-right: 16px;
+    padding-top: 20px;
+  }
+
+  .main-nav__logo-img {
+    width: 68px;
+    height: 15px;
+  }
+
+  .main-nav__tel {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}

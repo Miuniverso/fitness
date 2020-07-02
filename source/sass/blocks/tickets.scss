@@ -1,0 +1,101 @@
+.tickets {
+  background-color: #F8F9FC;
+
+  text-align: center;
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  &::after {
+    position: absolute;
+    content: "";
+
+    width: 321px;
+    height: 384px;
+
+    background-image: url("../../img/barbell-round@1x.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+
+    right: -34px;
+    bottom: -5%;
+    transform: rotate(0deg);
+  }
+}
+
+.tickets__title {
+  @include title;
+
+  margin: 0;
+  padding: 0;
+}
+
+.tickets__input {
+  display: none;
+}
+
+.tickets__tabs {
+  margin: 0;
+  padding: 0;
+
+  max-width: 341px;
+
+  margin: 0 auto;
+  margin-top: 32px;
+  padding-bottom: 2px;
+}
+
+@media (max-width: $desktop) {
+  .tickets {
+    padding-top: 49px;
+    padding-bottom: 102px;
+
+    &::after {
+      width: 289px;
+      height: 345px;
+
+      background-image: url("../../img/barbell-round-tablet@1x.png");
+
+
+      right: 58px;
+      bottom: -8px;
+      transform: rotate(0deg);
+    }
+  }
+
+  .tickets__title {
+    font-size: 42px;
+    line-height: 42px;
+  }
+
+  .tickets__tabs {
+    margin-top: 27px;
+
+    max-width: 332px;
+  }
+}
+
+@media (max-width: $tablet) {
+  .tickets {
+    padding-top: 69px;
+
+    margin-top: 71px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .tickets__title {
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  // .tickets__tabs {
+  //   font-size: 16px;
+  //   line-height: 24px;
+  // }
+}

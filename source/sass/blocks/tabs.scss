@@ -1,0 +1,86 @@
+.tabs {
+  display: flex;
+  justify-content: center;
+
+  font-family: $font-secondary;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 30px;
+
+  list-style: none;
+
+  border-bottom: 2px solid rgba(120, 120, 120, 0.2);
+}
+
+.tabs__item {
+
+  padding-bottom: 10px;
+  position: relative;
+
+  color: rgba(16, 38, 84, 0.5);
+
+  &:not(:last-child) {
+    margin-right: 45px;
+  }
+}
+
+#month:checked ~ .tabs .month-tab::after,
+#half-year:checked ~ .tabs .half-year-tab::after,
+#year:checked ~ .tabs .year-tab::after {
+  display:block;
+}
+
+#month:checked ~ .tabs .month-tab::after,
+#half-year:checked ~ .tabs .half-year-tab::after,
+#year:checked ~ .tabs .year-tab::after {
+  position: absolute;
+  content: "";
+  width: 102%;
+  height: 2px;
+  left: -1px;
+  bottom: -4px;
+
+  background-color: #D10A42;
+}
+
+#month:checked ~ .tabs .month-tab,
+#half-year:checked ~ .tabs .half-year-tab,
+#year:checked ~ .tabs .year-tab {
+  color: $dark-blue;
+}
+
+@media (max-width: $desktop) {
+  .tabs {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  .tabs__item {
+    padding-bottom: 10px;
+
+    &:not(:last-child) {
+      margin-right: 54px;
+    }
+  }
+}
+
+
+@media (max-width: $tablet) {
+  .tabs {
+    font-size: 16px;
+    line-height: 24px;
+
+    margin-top: 21px;
+
+    max-width: 91%;
+    justify-content: space-between;
+  }
+
+  .tabs__item {
+
+    &:not(:last-child) {
+      margin-right: 46px;
+    }
+  }
+}
