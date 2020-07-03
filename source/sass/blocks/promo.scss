@@ -1,0 +1,285 @@
+.promo {
+  padding-top: 120px;
+  padding-bottom: 80px;
+}
+
+.promo__title {
+  @include title;
+
+  margin: 0;
+  padding: 0;
+
+  text-align: center;
+}
+
+.promo__wrapper {
+  list-style: none;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 0;
+
+  display: flex;
+  justify-content: space-between;
+
+  max-width: 1160px;
+
+}
+
+.promo__item {
+  flex: 1;
+  max-width: 560px;
+}
+
+.promo__desc {
+  font-family: $font-secondary;
+  color: $white;
+
+  height: 100%;
+  height: 462px;
+
+  display: flex;
+}
+
+.promo__text {
+  background-color: $red;
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  padding-left: 45px;
+  padding-top: 34px;
+}
+
+.promo__period {
+  font-family: $font-secondary;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 44px;
+}
+
+.promo__price {
+  margin: 0;
+  margin-top: -25px;
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 70px;
+  line-height: 109px;
+}
+
+.promo__subtitle {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+
+  margin: 0;
+  padding-right: 35px;
+}
+
+.promo__link {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $white;
+
+  width: 79px;
+
+  border-bottom: 1px solid $white;
+
+  margin-top: auto;
+  margin-bottom: 46px;
+}
+
+.promo__photo {
+  width: 280px;
+  height: auto;
+
+  background-image: url("../../img/promotion@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  background-color: #497be4;
+}
+
+.promo__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  color: $middle-blue;
+}
+
+.promo__inner .promo__period {
+  font-size: 26px;
+}
+
+.promo__inner-item {
+  font-family: $font-secondary;
+
+  border: 8px solid #8d1a4b;
+  border-image-source: linear-gradient(135deg,#d00a42 21%,#04359c 82%);
+  border-image-slice: 11;
+  border-image-repeat: round;
+
+  padding: 15px 27px;
+  padding-bottom: 82px;
+  max-height: 211px;
+}
+
+.promo__inner-subtitle {
+  margin-top: 2px;
+}
+
+.promo__inner-link {
+  display: inline-block;
+  vertical-align: top;
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  width: 68px;
+
+  border-bottom: 1px solid $middle-blue;
+  color: $middle-blue;
+
+  margin-top: 58px;
+}
+
+@media (max-width: $desktop) {
+  .promo {
+    padding-top: 101px;
+  }
+
+  .promo__title {
+    font-size: 42px;
+    line-height: 42px;
+  }
+
+  .promo__wrapper {
+    flex-direction: column;
+    max-width: 88%;
+    margin-top: 39px;
+  }
+
+  .promo__item {
+    max-width: 100%;
+
+    &:first-child {
+      margin-bottom: 30px;
+    }
+  }
+
+  .promo__text {
+    width: 41%;
+  }
+
+  .promo__photo {
+    width: 59%;
+  }
+
+  .promo__inner {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .promo__inner-item {
+    width: 48%;
+  }
+
+  .promo__inner-item:first-child .promo__inner-subtitle {
+    padding-right: 30px;
+  }
+
+  .promo__inner-item:first-child .promo__inner-link {
+    margin-top: 37px;
+  }
+}
+
+@media (max-width: $tablet) {
+  .promo {
+    padding-top: 70px;
+  }
+
+  .promo__title {
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  .promo__wrapper {
+    margin-top: 42px;
+    max-width: 91%;
+  }
+
+  .promo__desc {
+    flex-direction: column;
+    height: 598px;
+  }
+
+  .promo__text,
+  .promo__photo {
+    flex: 1;
+    width: 100%;
+    height: 299px;
+  }
+
+  .promo__text {
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .promo__subtitle {
+    padding: 0 45px;
+    margin-top: -7px;
+  }
+
+  .promo__link {
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+
+  .promo__inner {
+    flex-direction: column;
+  }
+
+  .promo__inner-item {
+    width: 100%;
+
+    text-align: center;
+    padding-top: 25px;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    &:first-child .promo__inner-subtitle {
+      padding-right: 0;
+    }
+
+    &:first-child .promo__inner-link {
+      margin-top: 16px;
+    }
+  }
+
+  .promo__inner-subtitle {
+    padding-right: 0;
+  }
+
+  .promo__inner-link {
+    margin-top: 16px;
+  }
+}

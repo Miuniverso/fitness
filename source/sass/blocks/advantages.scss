@@ -257,6 +257,7 @@
 
   .advantages__cell {
     width: auto;
+    justify-content: flex-start;
 
     &::after {
       display: none;
