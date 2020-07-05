@@ -81,6 +81,63 @@ body {
   font-display: swap;
   src: url("../fonts/RobotoCondensed-Bold.woff2") format("woff2"), url("../fonts/RobotoCondensed-Bold.woff") format("woff"); }
 
+.main-page {
+  font-family: "Bebas Neue", "Roboto", sans-serif;
+  height: 100%;
+  background-color: #ED0233;
+  background: conic-gradient(from 130.31deg at 16.03% 39.06%, #B80027 -46.69deg, #003D85 32.24deg, #B80027 313.31deg, #003D85 392.24deg); }
+
+.main-page__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: inherit;
+  width: 70%;
+  margin: 0 auto; }
+
+.main-page__title {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 140px;
+  line-height: 140px;
+  letter-spacing: 0.03em;
+  color: #FFFFFF; }
+
+.main-page__links {
+  margin-top: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%; }
+
+.main-page__links a {
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+  font-size: 49px;
+  line-height: 49px;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: #FFFFFF;
+  opacity: 0.6;
+  border-bottom: 2px solid #FFFFFF; }
+  .main-page__links a:hover {
+    opacity: 1; }
+
 .main-header {
   background: conic-gradient(from 130.31deg at 16.03% 39.06%, #B80027 -46.69deg, #003D85 32.24deg, #B80027 313.31deg, #003D85 392.24deg); }
 
@@ -2140,3 +2197,6 @@ body {
       margin-top: 23px; }
     .data__item-wrapper:first-child::after {
       display: none; } }
+
+.main-footer {
+  background-color: #030A1A; }

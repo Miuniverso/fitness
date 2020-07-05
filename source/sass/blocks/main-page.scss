@@ -1,0 +1,65 @@
+.main-page {
+  font-family: $font-primary;
+  height: 100%;
+
+  background-color: $red;
+
+  background: conic-gradient(from 130.31deg at 16.03% 39.06%,
+                                  #B80027 -46.69deg,
+                                  #003D85 32.24deg,
+                                  #B80027 313.31deg,
+                                  #003D85 392.24deg);
+}
+
+.main-page__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: inherit;
+
+  width: 70%;
+  margin: 0 auto;
+}
+.main-page__title {
+  margin: 0;
+  padding: 0;
+
+  text-align: center;
+
+  font-size: 140px;
+  line-height: 140px;
+  letter-spacing: 0.03em;
+
+  color: $white;
+}
+
+.main-page__links {
+  margin-top: 70px;
+
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  width: 100%;
+}
+
+.main-page__links a {
+  @include animation;
+
+  font-size: 49px;
+  line-height: 49px;
+  letter-spacing: 0.03em;
+
+  text-align: center;
+  color: $white;
+
+  opacity: 0.6;
+
+  border-bottom: 2px solid $white;
+
+  &:hover {
+    opacity: 1;
+  }
+}
