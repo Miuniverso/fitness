@@ -91,6 +91,8 @@
 }
 
 .gym__btn {
+  @include animation;
+
   position: absolute;
   top: 50%;
   left: 50%;
@@ -105,23 +107,29 @@
   cursor: pointer;
 
   background: linear-gradient(44.89deg, #003D85 25.38%, #B80027 74.89%);
+  background-color: #B80027;
 
   // background-image:
   //   url("../../img/arrow.png"),
   //   linear-gradient(44.89deg, #003D85 25.38%, #B80027 74.89%);
   // background-repeat: no-repeat;
 
-  &:before {
-    position: absolute;
-    content: "";
+  // &:before {
+  //   position: absolute;
+  //   content: "";
+  //
+  //   position: absolute;
+  //   width: 100px;
+  //   height: 100px;
+  //
+  //   border-radius: 50%;
+  //
+  //   cursor: default;
+  // }
 
-    position: absolute;
-    width: 100px;
-    height: 100px;
-
-    border-radius: 50%;
-
-    cursor: default;
+  &:hover {
+    background: none;
+    background-color: #B80027;
   }
 }
 

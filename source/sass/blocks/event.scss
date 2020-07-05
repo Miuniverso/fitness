@@ -171,6 +171,10 @@
 
   width: 65%;
   min-height: 500px;
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/event-photo@2x.jpg");
+  }
 }
 
 
@@ -266,6 +270,10 @@
     background-image: url("../../img/event-photo-tablet@1x.jpg");
     background-size: cover;
     background-position: center;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/event-photo-tablet@2x.jpg");
+    }
   }
 }
 
@@ -303,5 +311,9 @@
 
     background-image: url("../../img/event-photo-mobile@1x.jpg");
     background-position: center;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/event-photo-mobile@2x.jpg");
+    }
   }
 }

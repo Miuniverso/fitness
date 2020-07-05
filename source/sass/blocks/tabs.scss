@@ -50,6 +50,16 @@
   color: $dark-blue;
 }
 
+.tabs__label {
+  @include animation;
+
+  cursor: pointer;
+
+  &:hover {
+    color: $dark-blue;
+  }
+}
+
 @media (max-width: $desktop) {
   .tabs {
     font-size: 18px;
