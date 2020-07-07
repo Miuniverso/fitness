@@ -1,0 +1,375 @@
+.timetable {
+  width: 1157px;
+  margin: 0 auto;
+
+  font-family: $font-secondary;
+}
+
+.timetable__title {
+  @include title;
+
+  margin: 0;
+  margin-top: 120px;
+  padding: 0;
+
+  text-align: center;
+}
+
+.timetable__day-list {
+  list-style: none;
+  margin: 0;
+  margin-top: 50px;
+  padding: 0;
+  padding-left: 68px;
+
+  display: flex;
+  justify-content: space-between;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 0px;
+
+  color: $table-blue;
+}
+
+.timetable__btn-wrapper {
+  display: none;
+}
+
+.timetable__day-item {
+  @include animation;
+
+  position: relative;
+
+  padding: 31px;
+
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border: 2px solid $middle-blue;
+
+  width: 148px;
+
+  cursor: pointer;
+
+  &--active {
+    background-color: $red;
+    color: $white;
+    border: 2px solid $red;
+  }
+}
+
+.timetable__workout-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: -42px;
+  bottom: -482px;
+
+  &--visible {
+    display: block;
+  }
+}
+
+.timetable__workout {
+  @include animation;
+
+  margin-bottom: 8px;
+  width: 148px;
+  height: 110px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #F8F9FC;
+  color: $table-blue;
+  box-sizing: border-box;
+
+  &:hover {
+    background-color: transparent;
+    border: 2px solid $red;
+  }
+}
+
+.timetable__time-list {
+  list-style: none;
+  margin: 0;
+  margin-left: -40px;
+  margin-top: 9px;
+
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 0px;
+
+  color: $table-blue;
+}
+
+.timetable__time {
+  @include animation;
+
+  width: 62px;
+  height: 108px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid $middle-blue;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  &--active {
+    background-color: $red;
+    color: $white;
+    border: 2px solid $red;
+  }
+}
+
+@media (max-width: $desktop) {
+  .timetable-body {
+    height: 100%;
+  }
+
+  // .timetable,
+  // .timetable__wrapper {
+  //   height: 96%;
+  // }
+
+  .timetable {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+
+    overflow-y: hidden;
+
+    font-family: $font-secondary;
+  }
+
+  .timetable__wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 576px;
+
+    scroll-behavior: auto;
+
+    &::-webkit-scrollbar {
+      width: 2px;
+      height: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: #feebef;
+      height: 2px;
+      width: 2px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $red;
+    }
+
+    // &::-webkit-scrollbar {
+    //   height: 10px;
+    //   background-color: #f5f5f5;
+    // }
+  }
+
+  .timetable__title {
+    font-size: 42px;
+    line-height: 42px;
+
+    margin-top: 81px;
+  }
+
+  .timetable__day-list {
+    margin-top: 39px;
+    padding-left: 77px;
+
+    left: 44px;
+  }
+
+  .timetable__day-item {
+    min-width: 146px;
+
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+
+  .timetable__workout-list {
+    bottom: -465px;
+  }
+
+  .timetable__workout {
+
+    width: 146px;
+    height: 108px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .timetable__time-list {
+    position: fixed;
+    left: 44px;
+    height: 575px;
+
+    padding-top: 100px;
+    padding-bottom: 20px;
+    top: 127px;
+
+    padding-right: 9px;
+    background-color: white;
+  }
+}
+
+@media (max-width: $tablet) {
+  .timetable {
+    width: 100%;
+  }
+
+  .timetable__title {
+    font-size: 32px;
+    line-height: 32px;
+
+    margin-top: 70px;
+  }
+
+  .timetable__wrapper {
+    overflow: hidden;
+
+    height: 100%;
+
+    width: 90%;
+    margin: 0 auto;
+
+    position: relative;
+  }
+
+  .timetable__day-list {
+    // width: 68%;
+    position: relative;
+    padding-left: 20px;
+    margin-top: 43px;
+
+    left: 47px;
+
+    flex-direction: column;
+  }
+
+  .timetable__workout-list {
+    width: 150%;
+    // min-width: 100%;
+    bottom: -351px;
+  }
+
+  .timetable__workout {
+    width: 99%;
+    height: 79px;
+  }
+
+  .timetable__btn-wrapper {
+    display: block;
+
+    position: absolute;
+    right: 0;
+    top: 43px;
+
+    height: 60px;
+
+    background-color: $white;
+  }
+
+  .timetable__btn {
+
+    width: 51px;
+    // height: 66px;
+
+    height: inherit;
+
+    border: 2px solid $middle-blue;
+    outline: none;
+
+    cursor: pointer;
+
+    background-color: transparent;
+
+    background-image: url("../../img/svg/arrow-table-down.svg");
+    background-repeat: no-repeat;
+
+    background-position: center;
+
+    &--active {
+      background-image: url("../../img/svg/arrow-table-up.svg");
+    }
+  }
+
+  .timetable__day-item {
+    width: 98%;
+    padding: 28px;
+    margin-right: 52px;
+
+    flex-direction: column;
+
+    display: none;
+
+    &:not(:last-child) {
+      margin-right: 52px;
+    }
+
+    // &:not(:first-child) {
+    //   display: none;
+    // }
+
+    &--visible {
+      display: block;
+    }
+  }
+
+  .timetable__time-list {
+    position: absolute;
+    // top: 202px;
+    // left: 55px;
+    padding: 0;
+    // width: 65px;
+
+    // top: 105px;
+    // left: 40px;
+
+    top: 101px;
+    left: 40px;
+
+    // top: 203px;
+    // left: 55px;
+
+    width: 62px;
+
+    height: 344px;
+
+    &--disabled {
+      opacity: 0.2;
+    }
+  }
+
+  .timetable__time {
+    width: 60px;
+    height: 80px;
+  }
+
+
+  .day {
+    width: 100%;
+  }
+}

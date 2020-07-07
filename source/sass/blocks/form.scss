@@ -40,6 +40,7 @@
   width: 46%;
   background-color: transparent;
   border: none;
+  outline: none;
   border-bottom: 1px solid #74819C;
   padding-bottom: 6px;
 
@@ -55,6 +56,8 @@
 }
 
 .form__btn {
+  @include animation;
+
   justify-content: center;
 
   font-style: normal;
@@ -73,6 +76,11 @@
 
   padding: 16px;
   margin-top: -12px;
+
+  &:hover {
+    background-color: $white;
+    color: $dark-blue;
+  }
 }
 
 @media (max-width: $desktop) {
