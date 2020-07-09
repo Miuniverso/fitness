@@ -17,6 +17,8 @@ var include = require("posthtml-include");
 var del = require("del");
 var uglify = require("gulp-uglify");
 
+// var babel = require("gulp-babel");
+
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
     .pipe(plumber())
@@ -104,6 +106,13 @@ gulp.task("js", function () {
     }))
     .pipe(gulp.dest("build/js"));
 })
+
+// gulp.task("js", function () {
+//   return gulp.src("source/js/**/*.js")
+//     .pipe(babel({presets: ["es2015"]})) // <= добавили эту строку
+//     .pipe(uglify())
+//     .pipe(gulp.dest("build/js"));
+// })
 
 gulp.task("clean", function () {
   return del("build");

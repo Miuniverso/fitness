@@ -1,75 +1,85 @@
-'use strict';
+"use strict";
 // SLIDER
 
 var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+
 // all sliders
 var sliders = document.querySelectorAll(".coach");
-// var sliderWrapper = document.querySelector(".coachs__list");
 var btnPrev = document.querySelector(".coachs__btn--prev");
 var btnNext = document.querySelector(".coachs__btn--next");
 
-var maxDesktop = 4;
-var maxTabllet = 2;
-var maxMobile = 1;
+var sliderTrack = document.querySelector(".coachs__list");
 
-if (viewportWidth > 1199) {
+// var maxDesktop = 4;
+// var maxTabllet = 2;
+// var maxMobile = 1;
 
-  for (var i = 0; i < 4; i++) {
-    sliders[i].classList.remove("visually-hidden");
-  }
+var stepNext = "translateX(-105%)";
+var stepPrev = "translateX(0)";
 
-  for (var i = 4; i < sliders.length; i++) {
-    sliders[i].classList.add("visually-hidden");
-  }
-
-} else if (viewportWidth < 1199 && viewportWidth > 767) {
-
-  for (var i = 2; i < sliders.length; i++) {
-    sliders[i].classList.add("visually-hidden");
-  }
-} else {
-  for (var i = 1; i < sliders.length; i++) {
-    sliders[i].classList.add("visually-hidden");
-  }
+if (viewportWidth < 1199 && viewportWidth > 767) {
+  stepNext = "translateX(-110%)";
 }
 
-window.addEventListener("resize", function() {
-  viewportWidth = window.innerWidth || document.documentElement.clientWidth;
-
-  if (viewportWidth > 1199) {
-    for (var i = 0; i < 4; i++) {
-      sliders[i].classList.remove("visually-hidden");
-    }
-
-    for (var i = 4; i < sliders.length; i++) {
-      sliders[i].classList.add("visually-hidden");
-    }
-  } else if (viewportWidth < 1199 && viewportWidth > 767) {
-
-    for (var i = 0; i < 2; i++) {
-      sliders[i].classList.remove("visually-hidden");
-    }
-    for (var i = 2; i < sliders.length; i++) {
-      sliders[i].classList.add("visually-hidden");
-    }
-  } else {
-    for (var i = 1; i < sliders.length; i++) {
-      sliders[i].classList.add("visually-hidden");
-    }
-  }
-}, false);
-
-function sliderNext() {
-  for (var i = 0; i < sliders.length; i++) {
-    sliders[i].classList.toggle("visually-hidden");
-  }
+if (viewportWidth < 767) {
+  stepNext = "translateX(-113%)";
 }
 
 function sliderPrev() {
-  for (var i = 0; i < sliders.length; i++) {
-    sliders[i].classList.toggle("visually-hidden");
+  console.log("Prev");
+
+  if (sliderTrack.style.transform === "translateX(-330%)") {
+    console.log("-330");
+    stepPrev = "translateX(-220%)";
   }
+
+  if (sliderTrack.style.transform === "translateX(-220%)") {
+    console.log("-220");
+    stepPrev = "translateX(-110%)";
+  }
+
+  if (sliderTrack.style.transform === "translateX(-110%)") {
+    stepPrev = "translateX(0%)";
+  }
+
+  sliderTrack.style.transform = stepPrev;
 }
+
+function sliderNext() {
+  console.log("Next");
+
+  // tablet
+
+  if (sliderTrack.style.transform === "translateX(-110%)") {
+    stepNext = "translateX(-220%)";
+  }
+
+  if (sliderTrack.style.transform === "translateX(-220%)") {
+    stepNext = "translateX(-330%)";
+  }
+
+  //mobile
+
+  if (sliderTrack.style.transform === "translateX(-113%)") {
+    stepNext = "translateX(-223%)";
+  }
+
+  if (sliderTrack.style.transform === "translateX(-223%)") {
+    stepNext = "translateX(-333%)";
+  }
+
+  if (sliderTrack.style.transform === "translateX(-333%)") {
+    stepNext = "translateX(-443%)";
+  }
+
+  if (sliderTrack.style.transform === "translateX(-443%)") {
+    stepNext = "translateX(-553%)";
+  }
+
+
+  sliderTrack.style.transform = stepNext;
+}
+
 
 btnPrev.addEventListener("click", sliderPrev);
 btnNext.addEventListener("click", sliderNext);

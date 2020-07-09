@@ -50,6 +50,8 @@
     "node": "8.15"
   },
   "dependencies": {
-    "del": "^4.1.1"
+    "babel-preset-es2015": "^6.24.1",
+    "del": "^4.1.1",
+    "gulp-babel": "^8.0.0"
   }
 }
