@@ -17,8 +17,6 @@ var include = require("posthtml-include");
 var del = require("del");
 var uglify = require("gulp-uglify");
 
-// var babel = require("gulp-babel");
-
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
     .pipe(plumber())

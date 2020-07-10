@@ -10,76 +10,46 @@ var btnNext = document.querySelector(".coachs__btn--next");
 
 var sliderTrack = document.querySelector(".coachs__list");
 
-// var maxDesktop = 4;
-// var maxTabllet = 2;
-// var maxMobile = 1;
+// eslint-disable-next-line no-new,no-undef
+var coachSlider = new Swiper(".coachs__swipe-container", {
 
-var stepNext = "translateX(-105%)";
-var stepPrev = "translateX(0)";
+  navigation: {
+    nextEl: ".coachs__btn--next",
+    prevEl: ".coachs__btn--prev",
+  },
 
-if (viewportWidth < 1199 && viewportWidth > 767) {
-  stepNext = "translateX(-110%)";
-}
+  initialSlide: 1,
 
-if (viewportWidth < 767) {
-  stepNext = "translateX(-113%)";
-}
-
-function sliderPrev() {
-  console.log("Prev");
-
-  if (sliderTrack.style.transform === "translateX(-330%)") {
-    console.log("-330");
-    stepPrev = "translateX(-220%)";
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 5
+    },
+    // when window width is >= 767px
+    767: {
+      slidesPerView: 2,
+      // spaceBetween: 30,
+      slidesPerGroup: 2
+    },
+    // when window width is >= 1366px
+    1366: {
+      slidesPerView: 4,
+      slidesPerGroup: 4,
+    }
   }
-
-  if (sliderTrack.style.transform === "translateX(-220%)") {
-    console.log("-220");
-    stepPrev = "translateX(-110%)";
-  }
-
-  if (sliderTrack.style.transform === "translateX(-110%)") {
-    stepPrev = "translateX(0%)";
-  }
-
-  sliderTrack.style.transform = stepPrev;
-}
-
-function sliderNext() {
-  console.log("Next");
-
-  // tablet
-
-  if (sliderTrack.style.transform === "translateX(-110%)") {
-    stepNext = "translateX(-220%)";
-  }
-
-  if (sliderTrack.style.transform === "translateX(-220%)") {
-    stepNext = "translateX(-330%)";
-  }
-
-  //mobile
-
-  if (sliderTrack.style.transform === "translateX(-113%)") {
-    stepNext = "translateX(-223%)";
-  }
-
-  if (sliderTrack.style.transform === "translateX(-223%)") {
-    stepNext = "translateX(-333%)";
-  }
-
-  if (sliderTrack.style.transform === "translateX(-333%)") {
-    stepNext = "translateX(-443%)";
-  }
-
-  if (sliderTrack.style.transform === "translateX(-443%)") {
-    stepNext = "translateX(-553%)";
-  }
+});
 
 
-  sliderTrack.style.transform = stepNext;
-}
+var commentSlider = new Swiper(".comment__wrapper", {
 
-
-btnPrev.addEventListener("click", sliderPrev);
-btnNext.addEventListener("click", sliderNext);
+  navigation: {
+    nextEl: ".comment__btn--next",
+    prevEl: ".comment__btn--prev",
+  },
+  // initialSlide: 1,
+  centeredSlides: true,
+  // spaceBetween: 158
+  centeredSlides: true,
+  centeredSlidesBounds: true
+});

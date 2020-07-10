@@ -22,7 +22,8 @@
   top: 0;
   left: 0;
 
-  height: 99%;
+  // height: 99%;
+  height: 219px;
   width: 100%;
 
   margin: 0;
@@ -93,7 +94,7 @@
   position: absolute;
 
   left: 50%;
-  bottom: 9px;
+  bottom: 5px;
   transform: translateX(-50%);
 
   width: 90%;
@@ -113,6 +114,10 @@
   .coach__photo {
     width: 268px;
   }
+
+  .coach__skills {
+    height: 216px;
+  }
 }
 
 @media (max-width: $tablet) {
@@ -120,7 +125,7 @@
     // min-width: 250px;
     // max-width: 90%;
 
-    width: 226px;
-    // height: 274px;
+    max-width: 226px;
+    height: 274px;
   }
 }
