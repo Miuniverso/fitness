@@ -2023,7 +2023,7 @@ button.swiper-pagination-bullet {
 @media (max-width: 767px) {
   .coachs {
     padding-top: 3px;
-    padding-bottom: 72px; }
+    padding-bottom: 50px; }
   .coachs__title {
     font-size: 32px;
     line-height: 32px; }
@@ -2045,7 +2045,7 @@ button.swiper-pagination-bullet {
   .coachs__btn {
     width: 10px;
     height: 19px;
-    top: 50%; }
+    top: 53%; }
     .coachs__btn--prev {
       background-image: url("../../img/svg/arrow-prev-mobile.svg"); }
     .coachs__btn--next {
@@ -2055,10 +2055,12 @@ button.swiper-pagination-bullet {
   position: relative;
   margin-bottom: 20px; }
   .coach:hover .coach__name {
-    top: 33px;
-    bottom: auto; }
+    top: 23px; }
   .coach:hover .coach__skills {
-    display: block; }
+    display: block;
+    left: -2px;
+    height: 208px;
+    width: 101%; }
 
 .coach__skills {
   display: none;
@@ -2336,7 +2338,7 @@ button.swiper-pagination-bullet {
     padding-top: 12px;
     margin: 0 auto; }
   .advantages__middle-desc p {
-    margin-top: 14px; }
+    margin-top: 6px; }
   .advantages__middle-subtitle {
     font-size: 22px;
     line-height: 33px; }
@@ -2672,11 +2674,12 @@ button.swiper-pagination-bullet {
     .promo__inner-item:first-child .promo__inner-subtitle {
       padding-right: 0; }
     .promo__inner-item:first-child .promo__inner-link {
-      margin-top: 16px; }
+      margin-top: 10px; }
   .promo__inner-subtitle {
-    padding-right: 0; }
+    padding-right: 0;
+    line-height: 22px; }
   .promo__inner-link {
-    margin-top: 16px; } }
+    margin-top: 10px; } }
 
 .comment {
   padding-top: 40px; }
@@ -2864,7 +2867,7 @@ button.swiper-pagination-bullet {
 
 @media (max-width: 767px) {
   .contact {
-    margin-top: 70px; }
+    margin-top: 48px; }
   .contact__form,
   .contact__data {
     width: 100%; } }

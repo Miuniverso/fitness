@@ -1,16 +1,5 @@
 "use strict";
-// SLIDER
 
-var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
-
-// all sliders
-var sliders = document.querySelectorAll(".coach");
-var btnPrev = document.querySelector(".coachs__btn--prev");
-var btnNext = document.querySelector(".coachs__btn--next");
-
-var sliderTrack = document.querySelector(".coachs__list");
-
-// eslint-disable-next-line no-new,no-undef
 var coachSlider = new Swiper(".coachs__swipe-container", {
 
   navigation: {

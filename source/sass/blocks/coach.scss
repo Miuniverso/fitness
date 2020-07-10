@@ -4,12 +4,14 @@
   margin-bottom: 20px;
 
   &:hover .coach__name {
-    top: 33px;
-    bottom: auto;
+    top: 23px;
   }
 
   &:hover .coach__skills {
     display: block;
+    left: -2px;
+    height: 208px;
+    width: 101%;
   }
 }
 

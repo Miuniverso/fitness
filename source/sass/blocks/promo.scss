@@ -300,18 +300,20 @@
 
     &:first-child .promo__inner-subtitle {
       padding-right: 0;
+
     }
 
     &:first-child .promo__inner-link {
-      margin-top: 16px;
+      margin-top: 10px;
     }
   }
 
   .promo__inner-subtitle {
     padding-right: 0;
+    line-height: 22px;
   }
 
   .promo__inner-link {
-    margin-top: 16px;
+    margin-top: 10px;
   }
 }
