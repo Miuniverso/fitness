@@ -3160,9 +3160,9 @@ button.swiper-pagination-bullet {
 .main-footer-social__item:not(:last-child) {
   margin-right: 25px; }
 
-.main-footer-social__link path {
+.main-footer-social__link svg {
   fill: #FFFFFF; }
-  .main-footer-social__link path:hover {
+  .main-footer-social__link svg:hover {
     fill: #103AAE; }
 
 .main-footer__link {

@@ -47,6 +47,10 @@
   }
 }
 
+// .main-footer-social__link svg {
+//   fill: $white;
+// }
+
 .main-footer-social {
   margin: 0;
   margin-left: auto;
@@ -64,7 +68,7 @@
   }
 }
 
-.main-footer-social__link path {
+.main-footer-social__link svg {
   fill: $white;
 
   &:hover {
