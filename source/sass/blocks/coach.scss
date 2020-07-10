@@ -9,9 +9,6 @@
 
   &:hover .coach__skills {
     display: block;
-    left: -2px;
-    height: 208px;
-    width: 101%;
   }
 }
 
@@ -119,15 +116,20 @@
 
   .coach__skills {
     height: 216px;
+
+    // left: -2px;
+    // height: 219px;
+    // width: 101%;
   }
 }
 
 @media (max-width: $tablet) {
   .coach {
-    // min-width: 250px;
-    // max-width: 90%;
-
     max-width: 226px;
     height: 274px;
+  }
+
+  .coach__skills {
+    height: 208px;
   }
 }

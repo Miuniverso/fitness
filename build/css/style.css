@@ -2057,10 +2057,7 @@ button.swiper-pagination-bullet {
   .coach:hover .coach__name {
     top: 23px; }
   .coach:hover .coach__skills {
-    display: block;
-    left: -2px;
-    height: 208px;
-    width: 101%; }
+    display: block; }
 
 .coach__skills {
   display: none;
@@ -2138,7 +2135,9 @@ button.swiper-pagination-bullet {
 @media (max-width: 767px) {
   .coach {
     max-width: 226px;
-    height: 274px; } }
+    height: 274px; }
+  .coach__skills {
+    height: 208px; } }
 
 .advantages {
   background-color: #F8F9FC;
