@@ -30,13 +30,13 @@
 
   &--prev {
     left: 0;
-    background-image: url("../../img/svg/arrow-prev.svg");
+    background-image: url("../img/svg/arrow-prev.svg");
     background-repeat: no-repeat;
   }
 
   &--next {
     right: 0;
-    background-image: url("../../img/svg/arrow-next.svg");
+    background-image: url("../img/svg/arrow-next.svg");
     background-repeat: no-repeat;
   }
 }
@@ -165,12 +165,12 @@
 
     &--prev {
       left: 6px;
-      background-image: url("../../img/svg/arrow-prev-mobile.svg");
+      background-image: url("../img/svg/arrow-prev-mobile.svg");
     }
 
     &--next {
       right: 6px;
-      background-image: url("../../img/svg/arrow-next-mobile.svg");
+      background-image: url("../img/svg/arrow-next-mobile.svg");
     }
   }
 

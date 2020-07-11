@@ -1976,11 +1976,11 @@ button.swiper-pagination-bullet {
   cursor: pointer; }
   .coachs__btn--prev {
     left: 0;
-    background-image: url("../../img/svg/arrow-prev.svg");
+    background-image: url("../img/svg/arrow-prev.svg");
     background-repeat: no-repeat; }
   .coachs__btn--next {
     right: 0;
-    background-image: url("../../img/svg/arrow-next.svg");
+    background-image: url("../img/svg/arrow-next.svg");
     background-repeat: no-repeat; }
 
 .coachs__list {
@@ -2057,9 +2057,9 @@ button.swiper-pagination-bullet {
     height: 19px;
     top: 53%; }
     .coachs__btn--prev {
-      background-image: url("../../img/svg/arrow-prev-mobile.svg"); }
+      background-image: url("../img/svg/arrow-prev-mobile.svg"); }
     .coachs__btn--next {
-      background-image: url("../../img/svg/arrow-next-mobile.svg"); } }
+      background-image: url("../img/svg/arrow-next-mobile.svg"); } }
 
 .coach {
   position: relative;
@@ -2717,11 +2717,11 @@ button.swiper-pagination-bullet {
   cursor: pointer; }
   .comment__btn--prev {
     left: 0;
-    background-image: url("../../img/svg/arrow-prev.svg");
+    background-image: url("../img/svg/arrow-prev.svg");
     background-repeat: no-repeat; }
   .comment__btn--next {
     right: 0;
-    background-image: url("../../img/svg/arrow-next.svg");
+    background-image: url("../img/svg/arrow-next.svg");
     background-repeat: no-repeat; }
 
 .comment__list {
@@ -2819,10 +2819,10 @@ button.swiper-pagination-bullet {
     top: 46%; }
     .comment__btn--prev {
       left: 6px;
-      background-image: url("../../img/svg/arrow-prev-mobile.svg"); }
+      background-image: url("../img/svg/arrow-prev-mobile.svg"); }
     .comment__btn--next {
       right: 6px;
-      background-image: url("../../img/svg/arrow-next-mobile.svg"); }
+      background-image: url("../img/svg/arrow-next-mobile.svg"); }
   .comment__list {
     padding-left: 13%;
     max-width: 91%; }

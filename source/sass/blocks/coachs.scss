@@ -40,13 +40,13 @@
 
   &--prev {
     left: 0;
-    background-image: url("../../img/svg/arrow-prev.svg");
+    background-image: url("../img/svg/arrow-prev.svg");
     background-repeat: no-repeat;
   }
 
   &--next {
     right: 0;
-    background-image: url("../../img/svg/arrow-next.svg");
+    background-image: url("../img/svg/arrow-next.svg");
     background-repeat: no-repeat;
   }
 }
@@ -161,11 +161,11 @@
     top: 53%;
 
     &--prev {
-      background-image: url("../../img/svg/arrow-prev-mobile.svg");
+      background-image: url("../img/svg/arrow-prev-mobile.svg");
     }
 
     &--next {
-      background-image: url("../../img/svg/arrow-next-mobile.svg");
+      background-image: url("../img/svg/arrow-next-mobile.svg");
     }
   }
 }
