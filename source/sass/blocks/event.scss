@@ -161,8 +161,6 @@
 }
 
 .event__img {
-  // max-width: 660px;
-
   background-image: url("../../img/event-photo@1x.jpg");
   background-repeat: no-repeat;
   background-size: contain;
@@ -177,6 +175,14 @@
   }
 }
 
+.webp .event__img {
+  background-image: url("../img/event-photo@1x.webp");
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/event-photo@2x.webp");
+  }
+}
+
 
 @media (max-width: $desktop) {
   .event {
@@ -184,8 +190,6 @@
   }
 
   .event__wrapper {
-    // max-width: 678px;
-
     max-width: 100%;
 
     margin: 0 45px;

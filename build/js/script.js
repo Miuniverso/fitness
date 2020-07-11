@@ -1,16 +1,5 @@
 "use strict";
-// SLIDER
 
-var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
-
-// all sliders
-var sliders = document.querySelectorAll(".coach");
-var btnPrev = document.querySelector(".coachs__btn--prev");
-var btnNext = document.querySelector(".coachs__btn--next");
-
-var sliderTrack = document.querySelector(".coachs__list");
-
-// eslint-disable-next-line no-new,no-undef
 var coachSlider = new Swiper(".coachs__swipe-container", {
 
   navigation: {
@@ -23,8 +12,7 @@ var coachSlider = new Swiper(".coachs__swipe-container", {
   breakpoints: {
     // when window width is >= 320px
     320: {
-      slidesPerView: 1,
-      spaceBetween: 5
+      slidesPerView: 1
     },
     // when window width is >= 767px
     767: {

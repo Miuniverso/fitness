@@ -26,7 +26,7 @@
     <div class="container">
       <nav class="main-nav">
         <a href="index.html" class="main-nav__logo">
-          <img class="main-nav__logo-img" src="../img/svg/logo.svg" alt="логотип фитнес-центра supergym" width="89" height="20">
+          <img class="main-nav__logo-img" src="img/svg/logo.svg" alt="логотип фитнес-центра supergym" width="89" height="20">
         </a>
         <a class="main-nav__tel" href="tel:88005555555">8-800-555-55-55</a>
       </nav>
@@ -45,14 +45,16 @@
           <button class="intro__btn" type="button" name="button">Купить абонемент</button>
         </div>
 
-        <!-- 1024 1х: 342px; 2x: 684px -->
-        <!-- 1023 1х: 270px; 2x: 540px -->
+        <!-- 1200 1х: 500px; 2x: 1000px -->
+        <!-- 1199 1х: 324px; 2x: 648px -->
 
         <picture>
           <source type="image/webp" media="(min-width: 1200px)" srcset="img/intro-man@1x.webp 1x, img/intro-man@2x.webp 2x">
           <source type="image/webp" media="(max-width: 1199px)" srcset="img/intro-man-tablet@1x.webp 1x, img/intro-man-tablet@2x.webp 2x">
 
-          <img class="intro__img" src="../img/intro-man@1x.jpg" srcset="../img/intro-man@2x.jpg 2x" width="500" height="556" alt="фото спортсмена в форме супермена">
+          <source media="(min-width: 1200px)" srcset="img/intro-man@1x.jpg 1x, img/intro-man@2x.jpg 2x">
+          <source media="(max-width: 1199px)" srcset="img/intro-man-tablet@1x.jpg 1x, img/intro-man-tablet@2x.jpg 2x">
+          <img class="intro__img" src="img/intro-man@1x.jpg" srcset="img/intro-man@2x.jpg 2x" width="500" height="556" alt="фото спортсмена в форме супермена">
         </picture>
 
         <ul class="intro__social-list">
@@ -83,10 +85,19 @@
 
       <div class="gym__img-wrapper">
 
+        <!-- 1200 1х: 500px; 2x: 1000px -->
+        <!-- 1199 1х: 324px; 2x: 648px -->
+        <!-- 767 1х: 324px; 2x: 648px -->
+
+
         <picture>
           <source type="image/webp" media="(min-width: 1200px)" srcset="img/gym-photo@1x.webp 1x, img/gym-photo@2x.webp 2x">
           <source type="image/webp" media="(max-width: 1199px)" srcset="img/gym-photo-tablet@1x.webp 1x, img/gym-photo-tablet@2x.webp 2x">
           <source type="image/webp" media="(max-width: 767px)" srcset="img/gym-photo-mobile@1x.webp 1x, img/gym-photo-mobile@2x.webp 2x">
+
+          <source media="(min-width: 1200px)" srcset="img/gym-photo@1x.jpg 1x, img/gym-photo@2x.jpg 2x">
+          <source media="(max-width: 1199px)" srcset="img/gym-photo-tablet@1x.jpg 1x, img/gym-photo-tablet@2x.jpg 2x">
+          <source media="(max-width: 767px)" srcset="img/gym-photo-tablet@1x.jpg 1x, img/gym-photo-tablet@2x.jpg 2x">
 
           <img class="gym__img" src="img/gym-photo@1x.jpg" srcset="img/gym-photo@2x.jpg 2x" alt="Тренажерный зал Supergym" width="660" height="401">
 
@@ -541,7 +552,7 @@
     <ul class="main-footer__wrapper">
       <li class="main-footer__item main-footer__item--logo">
         <a class="main-footer__link">
-          <img src="../img/svg/logo.svg" alt="логотип фитнес-центра supergym" width="89" height="20">
+          <img src="img/svg/logo.svg" alt="логотип фитнес-центра supergym" width="89" height="20">
         </a>
       </li>
       <li class="main-footer__item">
@@ -582,9 +593,7 @@
       </li>
     </ul>
   </footer>
-  <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  <script type="text/javascript" src="js/slick.min.js"></script> -->
+  <script src="js/modernizr-custom.min.js"></script>
   <script src="js/swiper.js"></script>
   <script src="js/script.min.js"></script>
 </body>

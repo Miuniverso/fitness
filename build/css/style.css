@@ -1101,7 +1101,8 @@ button.swiper-pagination-bullet {
 
 .intro__img {
   width: 695px;
-  height: auto; }
+  height: auto;
+  background-color: #032563; }
 
 .intro__btn {
   -webkit-transition: .3s ease;
@@ -1265,6 +1266,9 @@ button.swiper-pagination-bullet {
 
 .gym__img-wrapper {
   position: relative; }
+
+.gym__img {
+  background-color: #e5eaf7; }
 
 .gym__video-wrapper {
   position: absolute;
@@ -1840,6 +1844,12 @@ button.swiper-pagination-bullet {
     .event__img {
       background-image: url("../img/event-photo@2x.jpg"); } }
 
+.webp .event__img {
+  background-image: url("../img/event-photo@1x.webp"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+    .webp .event__img {
+      background-image: url("../img/event-photo@2x.webp"); } }
+
 @media (max-width: 1199px) {
   .event {
     padding-top: 100px; }
@@ -2058,6 +2068,9 @@ button.swiper-pagination-bullet {
     top: 23px; }
   .coach:hover .coach__skills {
     display: block; }
+
+.coach__photo {
+  background-color: #c2c8d3; }
 
 .coach__skills {
   display: none;
@@ -2772,7 +2785,8 @@ button.swiper-pagination-bullet {
 
 .comment__photo {
   width: 80px;
-  height: 80px; }
+  height: 80px;
+  background-color: #ceaea6; }
 
 @media (max-width: 1199px) {
   .comment {
