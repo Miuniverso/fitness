@@ -2785,8 +2785,7 @@ button.swiper-pagination-bullet {
 
 .comment__photo {
   width: 80px;
-  height: 80px;
-  background-color: #ceaea6; }
+  height: 80px; }
 
 @media (max-width: 1199px) {
   .comment {
