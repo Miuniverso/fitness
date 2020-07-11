@@ -69,6 +69,7 @@
 }
 
 .main-footer-social__link svg {
+  @include animation;
   fill: $white;
 
   &:hover {

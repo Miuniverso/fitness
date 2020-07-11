@@ -3173,6 +3173,8 @@ button.swiper-pagination-bullet {
   margin-right: 25px; }
 
 .main-footer-social__link svg {
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
   fill: #FFFFFF; }
   .main-footer-social__link svg:hover {
     fill: #103AAE; }
