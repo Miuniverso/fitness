@@ -347,6 +347,9 @@ body {
   max-width: 1160px;
   margin: 0 auto; }
 
+button {
+  outline: none; }
+
 /**
  * Swiper 6.0.2
  * Most modern mobile touch slider and framework with hardware accelerated transitions
