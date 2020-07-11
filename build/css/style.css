@@ -1136,7 +1136,8 @@ button.swiper-pagination-bullet {
   bottom: 15%; }
 
 .intro__social-item:not(:last-child) {
-  margin-bottom: 16px; }
+  margin-bottom: 16px;
+  margin-right: 3px; }
 
 .intro__social-link {
   -webkit-transition: .3s ease;
@@ -1386,13 +1387,19 @@ button.swiper-pagination-bullet {
     content: "";
     width: 321px;
     height: 384px;
-    background-image: url("../../img/barbell-round@1x.png");
+    background-image: url("../img/barbell-round@1x.png");
     background-repeat: no-repeat;
     background-size: auto;
     right: -34px;
     bottom: -5%;
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg); }
+    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+      .tickets::after {
+        background-image: url("../img/barbell-round@2x.png");
+        background-size: 89%;
+        right: -36px;
+        bottom: -5%; } }
 
 .tickets__title {
   font-family: "Bebas Neue", "Roboto", sans-serif;
@@ -1421,10 +1428,19 @@ button.swiper-pagination-bullet {
     .tickets::after {
       width: 289px;
       height: 345px;
-      background-image: url("../../img/barbell-round-tablet@1x.png");
+      background-image: url("../img/barbell-round-tablet@1x.png");
       bottom: -8px;
       -webkit-transform: rotate(0deg);
-              transform: rotate(0deg); }
+              transform: rotate(0deg); } }
+    @media (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1199px) and (min-resolution: 1.5dppx) {
+      .tickets::after {
+        background-image: url("../img/barbell-round-tablet@2x.png");
+        background-size: 89%;
+        right: -45px;
+        bottom: -23px;
+        width: 397px; } }
+
+@media (max-width: 1199px) {
   .tickets__title {
     font-size: 42px;
     line-height: 42px; }
@@ -2787,7 +2803,7 @@ button.swiper-pagination-bullet {
   margin-top: 13px; }
 
 .comment__photo {
-  width: 80px;
+  min-width: 80px;
   height: 80px; }
 
 @media (max-width: 1199px) {
@@ -2804,7 +2820,7 @@ button.swiper-pagination-bullet {
   .comment__item {
     max-width: 82%; }
     .comment__item:not(:last-child) {
-      margin-right: 123px; } }
+      margin-right: 18%; } }
 
 @media (max-width: 767px) {
   .comment {
@@ -2835,9 +2851,10 @@ button.swiper-pagination-bullet {
     .comment__item:not(:last-child) {
       margin-right: 28%; }
   .comment__photo {
-    width: 68px;
+    max-width: 68px;
+    min-width: 68px;
     height: 68px;
-    left: 17%;
+    left: 18%;
     position: absolute; }
   .comment__text {
     max-width: 76%;

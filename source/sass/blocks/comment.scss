@@ -108,7 +108,7 @@
 }
 
 .comment__photo {
-  width: 80px;
+  min-width: 80px;
   height: 80px;
 }
 
@@ -135,7 +135,7 @@
     max-width: 82%;
 
     &:not(:last-child) {
-      margin-right: 123px;
+      margin-right: 18%;
     }
   }
 }
@@ -189,11 +189,11 @@
   }
 
   .comment__photo {
-    width: 68px;
+    max-width: 68px;
+    min-width: 68px;
     height: 68px;
 
-    left: 17%;
-
+    left: 18%;
     position: absolute;
   }
 
