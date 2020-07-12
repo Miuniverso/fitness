@@ -2951,7 +2951,9 @@ button.swiper-pagination-bullet {
   border: none;
   outline: none;
   border-bottom: 1px solid #74819C;
-  padding-bottom: 6px; }
+  padding-bottom: 6px;
+  /* Firefox 19+ */
+  /* Firefox 18- */ }
   .form input[placeholder] {
     font-family: "Roboto Condensed", "Roboto", sans-serif;
     font-style: normal;
@@ -2959,6 +2961,14 @@ button.swiper-pagination-bullet {
     font-size: 14px;
     line-height: 16px;
     color: #FFFFFF; }
+  .form input::-webkit-input-placeholder {
+    color: white; }
+  .form input::-moz-placeholder {
+    color: white; }
+  .form input:-moz-placeholder {
+    color: white; }
+  .form input:-ms-input-placeholder {
+    color: white; }
 
 .form__btn {
   -webkit-transition: .3s ease;
@@ -3280,6 +3290,9 @@ button.swiper-pagination-bullet {
   padding: 0;
   text-align: center; }
 
+.timetable__mobile-list {
+  display: none; }
+
 .timetable__day-list {
   list-style: none;
   margin: 0;
@@ -3469,28 +3482,92 @@ button.swiper-pagination-bullet {
     width: 90%;
     margin: 0 auto;
     position: relative; }
-  .timetable__day-list {
-    position: relative;
-    padding-left: 20px;
-    margin-top: 43px;
-    left: 47px;
+  .timetable__mobile-list {
+    display: block;
+    position: absolute;
+    top: 23px;
+    z-index: 2;
+    width: 90%;
+    left: 67px;
+    height: 60px;
+    padding: 0;
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
-            flex-direction: column; }
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    font-size: 19px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    color: #1C3374; }
+  .timetable__mobile-item {
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 0px;
+    text-align: center;
+    height: 60px;
+    border-top: 2px solid #1C3374;
+    border-left: 2px solid #1C3374;
+    border-right: 2px solid #1C3374;
+    padding: 26px;
+    width: 79%;
+    padding: 28px;
+    margin-left: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
+    .timetable__mobile-item:first-child {
+      border-bottom: 2px solid #1C3374; }
+    .timetable__mobile-item:nth-child(2) {
+      border-top: none; }
+    .timetable__mobile-item:last-child {
+      border-bottom: 2px solid #1C3374; }
+    .timetable__mobile-item--hidden {
+      display: none; }
+  .timetable .timetable__mobile-item--active {
+    background-color: #ED0233;
+    color: #FFFFFF;
+    border: 2px solid #ED0233;
+    border-bottom: 2px solid #ED0233; }
+  .timetable__day-list {
+    position: relative;
+    margin-top: 43px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0;
+    left: 0;
+    margin-left: 68px; }
   .timetable__workout-list {
-    width: 150%;
-    bottom: -351px; }
+    visibility: visible;
+    width: 100%;
+    position: relative;
+    top: 65px;
+    margin: 0;
+    padding: 0;
+    left: 0; }
+    .timetable__workout-list--hidden {
+      display: none; }
   .timetable__workout {
-    width: 99%;
-    height: 79px; }
+    width: 100%;
+    height: 80px; }
   .timetable__btn-wrapper {
     display: block;
     position: absolute;
     right: 0;
-    top: 43px;
+    top: 42px;
     height: 60px;
-    background-color: #FFFFFF; }
+    background-color: #FFFFFF;
+    z-index: 5; }
   .timetable__btn {
     width: 51px;
     height: inherit;
@@ -3504,14 +3581,14 @@ button.swiper-pagination-bullet {
     .timetable__btn--active {
       background-image: url("../../img/svg/arrow-table-up.svg"); }
   .timetable__day-item {
-    width: 98%;
-    padding: 28px;
-    margin-right: 52px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    display: none; }
+    display: none;
+    visibility: hidden;
+    margin: 0;
+    padding: 0; }
     .timetable__day-item:not(:last-child) {
       margin-right: 52px; }
     .timetable__day-item--visible {
@@ -3519,7 +3596,7 @@ button.swiper-pagination-bullet {
   .timetable__time-list {
     position: absolute;
     padding: 0;
-    top: 101px;
+    top: 100px;
     left: 40px;
     width: 62px;
     height: 344px; }
@@ -3528,5 +3605,7 @@ button.swiper-pagination-bullet {
   .timetable__time {
     width: 60px;
     height: 80px; }
+    .timetable__time:not(:last-child) {
+      margin-bottom: 9px; }
   .day {
     width: 100%; } }

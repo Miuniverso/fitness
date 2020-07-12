@@ -13,6 +13,18 @@
   <section class="timetable">
     <h1 class="timetable__title">Расписание</h1>
     <div class="timetable__wrapper">
+      <ul class="timetable__mobile-list">
+        <li class="timetable__mobile-item">Понедельник</li>
+        <li class="timetable__mobile-item timetable__mobile-item--hidden">Вторник</li>
+        <li class="timetable__mobile-item timetable__mobile-item--hidden">Среда</li>
+        <li class="timetable__mobile-item timetable__mobile-item--hidden">Четверг</li>
+        <li class="timetable__mobile-item timetable__mobile-item--hidden">Пятница</li>
+        <li class="timetable__mobile-item timetable__mobile-item--hidden">Суббота</li>
+        <li class="timetable__mobile-item timetable__mobile-item--hidden">Воскресенье</li>
+      </ul>
+      <div class="timetable__btn-wrapper">
+        <button class="timetable__btn" type="button" name="button" aria-label="Кнопка списка всех дней недели"></button>
+      </div>
     <ul class="timetable__day-list">
       <li class="timetable__day-item timetable__day-item--visible day">Понедельник
         <ul class="timetable__workout-list">
@@ -80,9 +92,9 @@
       <li class="timetable__time">18:00</li>
       <li class="timetable__time">20:00</li>
     </ul>
-    <li class="timetable__btn-wrapper">
+    <!-- <li class="timetable__btn-wrapper">
       <button class="timetable__btn" type="button" name="button" aria-label="Кнопка списка всех дней недели"></button>
-    </li>
+    </li> -->
     </div>
   </section>
 <script src="js/timetable.min.js"></script>

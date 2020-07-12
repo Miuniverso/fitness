@@ -15,6 +15,10 @@
   text-align: center;
 }
 
+.timetable__mobile-list {
+  display: none;
+}
+
 .timetable__day-list {
   list-style: none;
   margin: 0;
@@ -258,26 +262,109 @@
     position: relative;
   }
 
+  .timetable__mobile-list {
+    display: block;
+
+    position: absolute;
+    top: 23px;
+    z-index: 2;
+    width: 90%;
+    left: 67px;
+    height: 60px;
+    padding: 0;
+
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 19px;
+    box-sizing: border-box;
+
+    color: $middle-blue;
+  }
+
+  .timetable__mobile-item {
+    @include animation;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 0px;
+    text-align: center;
+
+    height: 60px;
+    border-top: 2px solid $middle-blue;
+    border-left: 2px solid $middle-blue;
+    border-right: 2px solid $middle-blue;
+
+    padding: 26px;
+
+    width: 79%;
+    padding: 28px;
+    margin-left: 0;
+
+    box-sizing: border-box;
+
+    &:first-child {
+      border-bottom: 2px solid $middle-blue;
+    }
+
+    &:nth-child(2) {
+      border-top: none;
+    }
+
+    &:last-child {
+      border-bottom: 2px solid $middle-blue;
+    }
+
+    &--hidden {
+      display: none;
+    }
+  }
+
+  .timetable .timetable__mobile-item--active {
+    background-color: $red;
+    color: $white;
+    border: 2px solid $red;
+    border-bottom: 2px solid $red;
+  }
+
   .timetable__day-list {
     // width: 68%;
     position: relative;
-    padding-left: 20px;
+    // padding-left: 20px;
     margin-top: 43px;
 
-    left: 47px;
+    // left: 47px;
 
     flex-direction: column;
+
+    padding: 0;
+    left: 0;
+    margin-left: 68px;
   }
 
   .timetable__workout-list {
-    width: 150%;
-    // min-width: 100%;
-    bottom: -351px;
+    // width: 150%;
+    // bottom: -351px;
+
+    visibility: visible;
+
+    width: 100%;
+    position: relative;
+    top: 65px;
+    margin: 0;
+    padding: 0;
+    left: 0;
+
+    &--hidden {
+      display: none;
+    }
   }
 
   .timetable__workout {
-    width: 99%;
-    height: 79px;
+    width: 100%;
+    height: 80px;
   }
 
   .timetable__btn-wrapper {
@@ -285,18 +372,18 @@
 
     position: absolute;
     right: 0;
-    top: 43px;
+    top: 42px;
 
     height: 60px;
 
     background-color: $white;
+
+    z-index: 5;
   }
 
   .timetable__btn {
 
     width: 51px;
-    // height: 66px;
-
     height: inherit;
 
     border: 2px solid $middle-blue;
@@ -317,21 +404,22 @@
   }
 
   .timetable__day-item {
-    width: 98%;
-    padding: 28px;
-    margin-right: 52px;
+    // width: 98%;
+    // padding: 28px;
+    // margin-right: 52px;
 
     flex-direction: column;
 
     display: none;
 
+    visibility: hidden;
+
+    margin: 0;
+    padding: 0;
+
     &:not(:last-child) {
       margin-right: 52px;
     }
-
-    // &:not(:first-child) {
-    //   display: none;
-    // }
 
     &--visible {
       display: block;
@@ -340,19 +428,10 @@
 
   .timetable__time-list {
     position: absolute;
-    // top: 202px;
-    // left: 55px;
     padding: 0;
-    // width: 65px;
 
-    // top: 105px;
-    // left: 40px;
-
-    top: 101px;
+    top: 100px;
     left: 40px;
-
-    // top: 203px;
-    // left: 55px;
 
     width: 62px;
 
@@ -366,6 +445,10 @@
   .timetable__time {
     width: 60px;
     height: 80px;
+
+    &:not(:last-child) {
+      margin-bottom: 9px;
+    }
   }
 
 
