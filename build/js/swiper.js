@@ -1,15 +1,3 @@
-/**
- * Swiper 6.0.2
- * Most modern mobile touch slider and framework with hardware accelerated transitions
- * http://swiperjs.com
- *
- * Copyright 2014-2020 Vladimir Kharlampidi
- *
- * Released under the MIT License
- *
- * Released on: July 9, 2020
- */
-
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
   typeof define === 'function' && define.amd ? define(factory) :
@@ -49,18 +37,6 @@
 
     return _extends.apply(this, arguments);
   }
-
-  /**
-   * SSR Window 3.0.0-alpha.4
-   * Better handling for window object in SSR environment
-   * https://github.com/nolimits4web/ssr-window
-   *
-   * Copyright 2020, Vladimir Kharlampidi
-   *
-   * Licensed under MIT
-   *
-   * Released on: May 20, 2020
-   */
 
   /* eslint-disable no-param-reassign */
   function isObject(obj) {
@@ -203,18 +179,6 @@
     extend(win, ssrWindow);
     return win;
   }
-
-  /**
-   * Dom7 3.0.0-alpha.5
-   * Minimalistic JavaScript library for DOM manipulation, with a jQuery-compatible API
-   * https://framework7.io/docs/dom7.html
-   *
-   * Copyright 2020, Vladimir Kharlampidi
-   *
-   * Licensed under MIT
-   *
-   * Released on: June 22, 2020
-   */
 
   function _inheritsLoose(subClass, superClass) {
     subClass.prototype = Object.create(superClass.prototype);
@@ -3687,13 +3651,7 @@
           }
 
           if (params.freeModeSticky) {
-            // If freeModeSticky is active and the user ends a swipe with a slow-velocity
-            // event, then durations can be 20+ seconds to slide one (or zero!) slides.
-            // It's easy to see this when simulating touch with mouse events. To fix this,
-            // limit single-slide swipes to the default slide duration. This also has the
-            // nice side effect of matching slide speed if the user stopped moving before
-            // lifting finger or mouse vs. moving slowly before lifting the finger/mouse.
-            // For faster swipes, also apply limits (albeit higher ones).
+
             var moveDistance = Math.abs((rtl ? -newPosition : newPosition) - swiper.translate);
             var currentSlideSize = swiper.slidesSizesGrid[swiper.activeIndex];
 
@@ -5693,17 +5651,7 @@
           }
 
           if (swiper.params.freeModeSticky) {
-            // When wheel scrolling starts with sticky (aka snap) enabled, then detect
-            // the end of a momentum scroll by storing recent (N=15?) wheel events.
-            // 1. do all N events have decreasing or same (absolute value) delta?
-            // 2. did all N events arrive in the last M (M=500?) msecs?
-            // 3. does the earliest event have an (absolute value) delta that's
-            //    at least P (P=1?) larger than the most recent event's delta?
-            // 4. does the latest event have a delta that's smaller than Q (Q=6?) pixels?
-            // If 1-4 are "yes" then we're near the end of a momuntum scroll deceleration.
-            // Snap immediately and ignore remaining wheel events in this scroll.
-            // See comment above for "remaining wheel events in this scroll" determination.
-            // If 1-4 aren't satisfied, then wait to snap until 500ms after the last event.
+
             clearTimeout(swiper.mousewheel.timeout);
             swiper.mousewheel.timeout = undefined;
             var _recentWheelEvents = swiper.mousewheel.recentWheelEvents;
@@ -5723,12 +5671,7 @@
               // Increasing or reverse-sign delta means the user started scrolling again. Clear the wheel event log.
               _recentWheelEvents.splice(0);
             } else if (_recentWheelEvents.length >= 15 && _newEvent.time - firstEvent.time < 500 && firstEvent.delta - _newEvent.delta >= 1 && _newEvent.delta <= 6) {
-              // We're at the end of the deceleration of a momentum scroll, so there's no need
-              // to wait for more events. Snap ASAP on the next tick.
-              // Also, because there's some remaining momentum we'll bias the snap in the
-              // direction of the ongoing scroll because it's better UX for the scroll to snap
-              // in the same direction as the scroll instead of reversing to snap.  Therefore,
-              // if it's already scrolled more than 20% in the current direction, keep going.
+
               var snapToThreshold = delta > 0 ? 0.8 : 0.2;
               swiper.mousewheel.lastEventBeforeSnap = _newEvent;
 
@@ -5768,26 +5711,12 @@
     },
     animateSlider: function animateSlider(newEvent) {
       var swiper = this;
-      var window = getWindow(); // If the movement is NOT big enough and
-      // if the last time the user scrolled was too close to the current one (avoid continuously triggering the slider):
-      //   Don't go any further (avoid insignificant scroll movement).
+      var window = getWindow();
 
       if (newEvent.delta >= 6 && now() - swiper.mousewheel.lastScrollTime < 60) {
         // Return false as a default
         return true;
-      } // If user is scrolling towards the end:
-      //   If the slider hasn't hit the latest slide or
-      //   if the slider is a loop and
-      //   if the slider isn't moving right now:
-      //     Go to next slide and
-      //     emit a scroll event.
-      // Else (the user is scrolling towards the beginning) and
-      // if the slider hasn't hit the first slide or
-      // if the slider is a loop and
-      // if the slider isn't moving right now:
-      //   Go to prev slide and
-      //   emit a scroll event.
-
+      }
 
       if (newEvent.direction < 0) {
         if ((!swiper.isEnd || swiper.params.loop) && !swiper.animating) {
@@ -7730,9 +7659,7 @@
 
       this.x = x;
       this.y = y;
-      this.lastIndex = x.length - 1; // Given an x value (x2), return the expected y2 value:
-      // (x1,y1) is the known point before given value,
-      // (x3,y3) is the known point after given value.
+      this.lastIndex = x.length - 1;
 
       var i1;
       var i3;
@@ -7765,10 +7692,7 @@
       var Swiper = swiper.constructor;
 
       function setControlledTranslate(c) {
-        // this will create an Interpolate function based on the snapGrids
-        // x is the Grid of the scrolled scroller and y will be the controlled scroller
-        // it makes sense to create this only once and recall it for the interpolation
-        // the function does a lot of value caching for performance
+
         var translate = swiper.rtlTranslate ? -swiper.translate : swiper.translate;
 
         if (swiper.params.controller.by === 'slide') {

@@ -26,6 +26,7 @@
 
   width: 360px;
   padding-bottom: 91px;
+  margin-bottom: 30px;
 
   position: relative;
 
@@ -146,6 +147,7 @@
 .types__link {
   @include animation;
 
+
   border: 2px solid $dark-blue;
   color: $dark-blue;
 
@@ -160,6 +162,8 @@
   background-color: transparent;
 
   padding: 23px 45px;
+
+  z-index: 999;
 }
 
 @media (max-width: $desktop) {

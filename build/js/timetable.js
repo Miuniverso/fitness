@@ -4,6 +4,9 @@ var workouts = document.querySelectorAll(".timetable__workout");
 
 var times = document.querySelectorAll(".timetable__time");
 
+var mobileDays = document.querySelectorAll(".timetable__mobile-item");
+
+
 for (var i = 0; i < workouts.length; i++) {
 
    // При наведении на тренировку
@@ -25,6 +28,9 @@ for (var i = 0; i < workouts.length; i++) {
 
     // активирую время с соответствующим индексом
     times[time].classList.add("timetable__time--active");
+
+    // подсветка дня в мобильной версии
+    mobileDays[0].classList.add("timetable__mobile-item--active");
   })
 
   // При снятии наведения с тренировки
@@ -37,6 +43,7 @@ for (var i = 0; i < workouts.length; i++) {
     var time = nodes.indexOf(target);
 
     times[time].classList.remove("timetable__time--active");
+    mobileDays[0].classList.remove("timetable__mobile-item--active");
   })
 }
 
@@ -49,43 +56,66 @@ var daysWrapper = document.querySelector(".timetable__day-list");
 // console.log(days)
 var timesWrapper = document.querySelector(".timetable__time-list");
 
+var workoutGroups = document.querySelectorAll(".timetable__workout-list");
+var workoutGroupsArray = Array.prototype.slice.call(workoutGroups);
+
+// console.log(workoutGroupsArray[0]);
+
+
+// click button
+
+var monday = "Понедельник";
+
 btn.addEventListener("click", function() {
+
+  // возвращение понедельника
+  mobileDays[0].textContent = monday;
+
+  // смена картинки в кнопке
   btn.classList.toggle("timetable__btn--active");
+  // прозрачность столбика со временем
+  timesWrapper.classList.toggle("timetable__time-list--disabled");
 
-  for (var i = 1; i < days.length; i++) {
-    days[i].classList.toggle("timetable__day-item--visible");
-    // days[i].addEventListener("click", function(event) {
-    //   console.log(event.target.textContent);
-    // })
-    // if (days[i].classList.contains("timetable__day-item--visible")) {
-    //   break;
-    // }
+  // скрываю все тренеровки
+  days.forEach(function(itemDay) {
+    itemDay.classList.remove("timetable__day-item--visible");
+  })
+
+  // пояление всех дней в списке (смена класса у всех элементов, кроме первого)
+  for (var i = 1; i < mobileDays.length; i++) {
+    mobileDays[i].classList.toggle("timetable__mobile-item--hidden");
   }
 
-  for (var i = 0; i < workouts.length; i++) {
-    workouts[i].classList.toggle("visually-hidden");
-  }
+  // смена выбранного дня
+  for (var i = 0; i < mobileDays.length; i++) {
+    mobileDays[i].addEventListener("click", function(event) {
+      mobileDays[0].textContent = event.target.textContent;
 
-  for (var i = 0; i < days.length; i++) {
-    days[i].addEventListener("click", function(event) {
-      event.preventDefault();
-      // нажатый день из списка развиваю на строки и выбираю первую (с названием)
-      var titleDay = event.target.textContent.split('\n')[0];
-      daysWrapper.firstElementChild.textContent = titleDay;
-
-      for (var i = 1; i < days.length; i++) {
-        days[i].classList.toggle("timetable__day-item--visible");
-        btn.classList.remove("timetable__btn--active");
-        timesWrapper.classList.remove("timetable__time-list--disabled");
-        console.log(daysWrapper.firstElementChild);
-        // daysWrapper.firstElementChild.firstElementChild.classList.add();
+      // скрытие всех дней в списке (смена класса у всех элементов, кроме первого)
+      for (var i = 1; i < mobileDays.length; i++) {
+        mobileDays[i].classList.add("timetable__mobile-item--hidden");
       }
 
-      event.target.firstElementChild.classList.add("timetable__time-list--visible")
-    })
+      btn.classList.remove("timetable__btn--active");
+      timesWrapper.classList.remove("timetable__time-list--disabled");
+
+      // console.log("Выбрали - " + mobileDays[0].textContent);
+
+
+      // появление нужного списка тренировок
+      var noMobileDays = document.querySelectorAll(".timetable__day-item");
+
+      for (var i = 0; i < noMobileDays.length; i++) {
+      // день из списка разбиваю на строки и выбираю первую (с названием)
+      var titleDay = noMobileDays[i].textContent.split('\n')[0];
+
+      // если выбранный в мобильном списке день совпадает с днем из старого списка
+      if (event.target.textContent === titleDay) {
+        // показываю тренировки выбранного дня
+          noMobileDays[i].classList.add("timetable__day-item--visible");
+        }
+      }
+
+    });
   }
-
-
-
-  timesWrapper.classList.toggle("timetable__time-list--disabled");
 })

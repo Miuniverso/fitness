@@ -42,7 +42,7 @@
               <li class="intro__desc-item">Кардио-зона</li>
             </ul>
           </div>
-          <button class="intro__btn" type="button" name="button">Купить абонемент</button>
+          <a class="intro__btn" href="#tickets" type="button" name="button">Купить абонемент</a>
         </div>
 
         <!-- 1200 1х: 500px; 2x: 1000px -->
@@ -111,7 +111,7 @@
         </div>
       </div>
     </section>
-    <section class="tickets">
+    <section class="tickets" id="tickets">
       <h2 class="tickets__title">Абонементы</h2>
 
       <input class="tickets__input" id="month" name="group" type="radio" checked>
@@ -215,29 +215,31 @@
     <section class="event">
       <h2 class="visually-hidden">Предстоящие совервнования</h2>
       <div class="event__wrapper">
-        <div class="event__text">
-          <div class="event__text-up">
-            <h3 class="event__title">SUPER GAMES</h3>
-            <div class="event__period">
-              <div class="event__date">
-                <b class="event__date-subtitle">Дата</b>
-                <div class="event__date-wrapper">
-                  <span class="event__numeral">7</span>
-                  <div class="event__month-year">
-                    <span>марта</span>
-                    <span>2019</span>
+        <div class="event__text-wrapper">
+          <div class="event__text">
+            <div class="event__text-up">
+              <h3 class="event__title">SUPER GAMES</h3>
+              <div class="event__period">
+                <div class="event__date">
+                  <b class="event__date-subtitle">Дата</b>
+                  <div class="event__date-wrapper">
+                    <span class="event__numeral">7</span>
+                    <div class="event__month-year">
+                      <span>марта</span>
+                      <span>2019</span>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="event__time">
-                <b class="event__time-subtitle">Время</b>
-                <p class="event__time-numeral">12:00</p>
+                <div class="event__time">
+                  <b class="event__time-subtitle">Время</b>
+                  <p class="event__time-numeral">12:00</p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="event__text-down">
-            <p class="event__desc">Ежегодные соревнования по CrossFit</p>
-            <a class="event__link" href="#">заполнить заявку</a>
+            <div class="event__text-down">
+              <p class="event__desc">Ежегодные соревнования по CrossFit</p>
+              <a class="event__link" href="#">заполнить заявку</a>
+            </div>
           </div>
         </div>
 
@@ -591,9 +593,9 @@
         <form class="form__wrapper" method="post">
           <div class="form__inputs">
             <label for="name">Имя</label>
-            <input type="text" placeholder="Имя" id="name">
+            <input type="text" placeholder="Имя" id="name" required>
             <label for="tel">Телефон</label>
-            <input type="tel" maxlength="10" pattern="[0-9]{3}[0-9]{3}[0-9]{2}[0-9]{2}" placeholder="Телефон" id="tel">
+            <input type="tel" maxlength="10" pattern="[0-9]{3}[0-9]{3}[0-9]{2}[0-9]{2}" placeholder="Телефон" id="tel" required>
           </div>
           <button class="form__btn" type="submit" name="button">отправить</button>
         </form>
@@ -671,6 +673,10 @@
       </li>
     </ul>
   </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/5530/conic-gradient.js"></script>
+  <!-- <script src="js/conic-gradient.js"></script> -->
+  <!-- <script src="https://leaverou.github.io/conic-gradient/conic-gradient.js"></script> -->
   <script src="js/modernizr-custom.min.js"></script>
   <script src="js/swiper.min.js"></script>
   <script src="js/script.min.js"></script>

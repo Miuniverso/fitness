@@ -15,6 +15,9 @@
   margin-left: 32%;
   padding: 0;
 
+  max-width: 41%;
+  flex-wrap: wrap;
+
   font-family: $font-secondary;
   font-style: normal;
   font-weight: normal;
@@ -131,6 +134,8 @@
 
     font-size: 16px;
     line-height: 19px;
+
+    max-width: inherit;
   }
 
   .main-footer__item {

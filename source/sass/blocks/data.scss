@@ -46,6 +46,10 @@
   }
 }
 
+.data__item-wrapper a:hover {
+  color: $red;
+}
+
 .data__item {
 
   &:not(:last-child) {
@@ -61,6 +65,8 @@
 }
 
 .data__text {
+  @include animation;
+
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -102,6 +108,7 @@
 
     &:last-child {
     width: 51%;
+    margin-right: -3px;
     }
   }
 

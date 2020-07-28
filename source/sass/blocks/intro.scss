@@ -96,6 +96,9 @@
 
   cursor: pointer;
 
+  display: inline-block;
+  vertical-align: top;
+
   &:hover {
     background-color: #FFFFFF;
     color: #003d85;
@@ -194,9 +197,14 @@
   }
 
   .intro__wrapper-text {
+    // text-align: right;
+    // margin-right: 0;
+    // width: 100%;
+
     text-align: right;
-    margin-right: 0;
-    width: 100%;
+    width: 320px;
+    margin: 0 auto;
+    margin-top: 49px;
   }
 
   .intro__subtitle {

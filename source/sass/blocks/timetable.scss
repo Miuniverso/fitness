@@ -268,7 +268,8 @@
     position: absolute;
     top: 23px;
     z-index: 2;
-    width: 90%;
+    // width: 90%;
+    width: calc(100% - 66px);
     left: 67px;
     height: 60px;
     padding: 0;
@@ -299,7 +300,8 @@
 
     padding: 26px;
 
-    width: 79%;
+    // width: 66%;
+    width: calc(100% - 50px);
     padding: 28px;
     margin-left: 0;
 
@@ -330,12 +332,9 @@
   }
 
   .timetable__day-list {
-    // width: 68%;
     position: relative;
-    // padding-left: 20px;
     margin-top: 43px;
 
-    // left: 47px;
 
     flex-direction: column;
 
@@ -345,9 +344,6 @@
   }
 
   .timetable__workout-list {
-    // width: 150%;
-    // bottom: -351px;
-
     visibility: visible;
 
     width: 100%;
@@ -404,10 +400,6 @@
   }
 
   .timetable__day-item {
-    // width: 98%;
-    // padding: 28px;
-    // margin-right: 52px;
-
     flex-direction: column;
 
     display: none;

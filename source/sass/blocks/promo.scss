@@ -143,9 +143,12 @@
   border-image-slice: 11;
   border-image-repeat: round;
 
-  padding: 15px 27px;
-  padding-bottom: 82px;
-  max-height: 211px;
+  // padding: 15px 27px;
+  // padding-bottom: 82px;
+  // max-height: 211px;
+
+  padding: 15px 27px 27px;
+  min-height: 211px;
 }
 
 .promo__inner-subtitle {
