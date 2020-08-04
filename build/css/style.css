@@ -1601,7 +1601,8 @@ button.swiper-pagination-bullet {
     color: #FFFFFF;
     background: linear-gradient(111.72deg, #ED0233 17.6%, #003EB7 95.31%);
     border: none;
-    padding: 25px 47px; }
+    padding: 25px 47px;
+    cursor: pointer; }
 
 .types__title {
   font-family: "Roboto Condensed", "Roboto", sans-serif;
@@ -1668,7 +1669,9 @@ button.swiper-pagination-bullet {
   text-transform: uppercase;
   background-color: transparent;
   padding: 23px 45px;
-  z-index: 999; }
+  z-index: 999;
+  position: relative;
+  cursor: pointer; }
 
 @media (max-width: 1199px) {
   .types__list {

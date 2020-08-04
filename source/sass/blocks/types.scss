@@ -77,6 +77,8 @@
     border: none;
 
     padding: 25px 47px;
+
+    cursor: pointer;
   }
 }
 
@@ -164,6 +166,9 @@
   padding: 23px 45px;
 
   z-index: 999;
+  position: relative;
+
+  cursor: pointer;
 }
 
 @media (max-width: $desktop) {
