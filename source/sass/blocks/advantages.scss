@@ -78,6 +78,10 @@
   margin-top: -16px;
 }
 
+.advantages__overlay {
+
+}
+
 .advantages__count {
   font-family: $font-secondary;
   font-style: normal;
@@ -87,14 +91,13 @@
 
   margin-right: 25px;
 
-  background: -webkit-linear-gradient(145.72deg, #ED0233 25.6%, #003EB7 56.31%);
   background: linear-gradient(145.72deg, #ED0233 25.6%, #003EB7 56.31%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.advantages__count span {
-  display: block;
+.advantages .advantages__small-text {
+  display: -webkit-box;
   margin-top: -10px;
   margin-left: -2px;
 

@@ -59,8 +59,10 @@
 
 @media (max-width: $desktop) {
   .tickets {
-    padding-top: 49px;
-    padding-bottom: 102px;
+    // padding-top: 49px;
+    padding-top: 101px;
+    // padding-bottom: 102px;
+    padding-bottom: 72px;
 
     &::after {
       width: 289px;

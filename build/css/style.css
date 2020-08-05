@@ -1325,7 +1325,8 @@ button.swiper-pagination-bullet {
             flex-direction: column;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center; }
+            align-items: center;
+    padding-bottom: 127px; }
   .gym__desc-wrapper {
     max-width: 80%;
     margin: 0;
@@ -1345,7 +1346,7 @@ button.swiper-pagination-bullet {
     width: 678px;
     height: 345px; }
   .gym__video-wrapper {
-    top: 75%;
+    top: 65%;
     left: 50%;
     -webkit-transform: translate(-50%);
             transform: translate(-50%); }
@@ -1435,8 +1436,8 @@ button.swiper-pagination-bullet {
 
 @media (max-width: 1199px) {
   .tickets {
-    padding-top: 49px;
-    padding-bottom: 102px; }
+    padding-top: 101px;
+    padding-bottom: 72px; }
     .tickets::after {
       width: 289px;
       height: 345px;
@@ -2289,8 +2290,8 @@ button.swiper-pagination-bullet {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; }
 
-.advantages__count span {
-  display: block;
+.advantages .advantages__small-text {
+  display: -webkit-box;
   margin-top: -10px;
   margin-left: -2px;
   font-family: "Roboto Condensed", "Roboto", sans-serif;
@@ -2848,9 +2849,7 @@ button.swiper-pagination-bullet {
   .comment__list {
     padding-left: 62px; }
   .comment__item {
-    max-width: 82%; }
-    .comment__item:not(:last-child) {
-      margin-right: 18%; } }
+    max-width: calc(100% - 121px); } }
 
 @media (max-width: 767px) {
   .comment {
@@ -2877,7 +2876,8 @@ button.swiper-pagination-bullet {
   .comment__item {
     padding: 0;
     padding-top: 40px;
-    padding-bottom: 37px; }
+    padding-bottom: 37px;
+    max-width: 82%; }
     .comment__item:not(:last-child) {
       margin-right: 28%; }
   .comment__photo {
@@ -3258,7 +3258,8 @@ button.swiper-pagination-bullet {
   .main-footer {
     padding: 44px 6%; }
   .main-footer__wrapper {
-    margin-left: 21%; }
+    margin-left: 21%;
+    max-width: 61%; }
   .main-footer__item--logo {
     left: -37%;
     width: 82px;

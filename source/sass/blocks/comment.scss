@@ -135,11 +135,12 @@
   }
 
   .comment__item {
-    max-width: 82%;
+    // max-width: 82%;
+    max-width: calc(100% - 121px);
 
-    &:not(:last-child) {
-      margin-right: 18%;
-    }
+    // &:not(:last-child) {
+    //   margin-right: 18%;
+    // }
   }
 }
 
@@ -185,6 +186,8 @@
     padding: 0;
     padding-top: 40px;
     padding-bottom: 37px;
+
+    max-width: 82%;
 
     &:not(:last-child) {
       margin-right: 28%;
