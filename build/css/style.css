@@ -1220,7 +1220,8 @@ button.swiper-pagination-bullet {
   .intro__btn {
     padding: 21px 31px;
     margin-top: 38px;
-    width: 100%; }
+    width: 100%;
+    text-align: center; }
   .intro__img {
     display: none; } }
 
@@ -2613,6 +2614,8 @@ button.swiper-pagination-bullet {
   border-image-repeat: round;
   padding: 15px 27px 27px;
   min-height: 211px; }
+  .promo__inner-item:first-child {
+    margin-bottom: 10px; }
 
 .promo__inner-subtitle {
   margin-top: 2px; }
@@ -2673,6 +2676,8 @@ button.swiper-pagination-bullet {
             justify-content: space-between; }
   .promo__inner-item {
     width: 48%; }
+    .promo__inner-item:first-child {
+      margin-bottom: 0; }
   .promo__inner-item:first-child .promo__inner-subtitle {
     padding-right: 30px; }
   .promo__inner-item:first-child .promo__inner-link {
@@ -2890,7 +2895,6 @@ button.swiper-pagination-bullet {
     max-width: 76%;
     position: relative; }
   .comment__name {
-    width: 100px;
     position: absolute;
     left: 55%;
     top: 12px; }
@@ -3024,7 +3028,8 @@ button.swiper-pagination-bullet {
   background-color: transparent;
   border: 3px solid #FFFFFF;
   padding: 16px;
-  margin-top: -12px; }
+  margin-top: -12px;
+  cursor: pointer; }
   .form__btn:hover {
     background-color: #FFFFFF;
     color: #102654; }

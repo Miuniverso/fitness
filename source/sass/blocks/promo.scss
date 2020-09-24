@@ -149,6 +149,10 @@
 
   padding: 15px 27px 27px;
   min-height: 211px;
+
+  &:first-child {
+    margin-bottom: 10px;
+  }
 }
 
 .promo__inner-subtitle {
@@ -225,6 +229,10 @@
 
   .promo__inner-item {
     width: 48%;
+
+    &:first-child {
+      margin-bottom: 0;
+    }
   }
 
   .promo__inner-item:first-child .promo__inner-subtitle {
